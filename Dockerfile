@@ -28,11 +28,7 @@ WORKDIR /app
  
 # Copy the built jar file from the build stage
 
-<<<<<<< HEAD
-COPY --from=builder /app/target/*.war demo.war
-=======
-COPY --from=builder /app/target/*.jar demo.jar
->>>>>>> 18deeaa7981016acdb27e97984f245fc859bd11b
+COPY --from=builder /app/target/*.war hackathon.war
  
 # Expose the application port
 
@@ -40,10 +36,5 @@ EXPOSE 9093:8080
  
 # Define the entrypoint to run the application
 
-<<<<<<< HEAD
-ENTRYPOINT ["java", "-jar", "demo.war"]
+ENTRYPOINT ["java", "-jar", "hackathon.war"]
  
-=======
-ENTRYPOINT ["java", "-jar", "demo.jar"]
- 
->>>>>>> 18deeaa7981016acdb27e97984f245fc859bd11b
